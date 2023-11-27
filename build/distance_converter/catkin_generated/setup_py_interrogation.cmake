@@ -1,0 +1,7 @@
+set(distance_converter_SETUP_PY_SETUP_MODULE "setuptools")
+set(distance_converter_SETUP_PY_VERSION "0.0.0")
+set(distance_converter_SETUP_PY_SCRIPTS "")
+set(distance_converter_SETUP_PY_PACKAGES "distance_converter")
+set(distance_converter_SETUP_PY_PACKAGE_DIRS "distance_converter")
+set(distance_converter_SETUP_PY_MODULES "")
+set(distance_converter_SETUP_PY_MODULE_DIRS "")

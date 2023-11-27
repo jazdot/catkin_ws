@@ -1,0 +1,10 @@
+(cl:defpackage distance_converter-srv
+  (:use )
+  (:export
+   "DISTANCECONVERSION"
+   "<DISTANCECONVERSION-REQUEST>"
+   "DISTANCECONVERSION-REQUEST"
+   "<DISTANCECONVERSION-RESPONSE>"
+   "DISTANCECONVERSION-RESPONSE"
+  ))
+

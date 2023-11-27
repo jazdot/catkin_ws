@@ -1,0 +1,2 @@
+diagnose_arm:distance_converter:lab3_sub_pub:robocar:swarm_robot_ros_sim/catkin_simple:swarm_robot_ros_sim/swarm_robot_controller:swarm_robot_ros_sim/swarm_robot_description:swarm_robot_ros_sim/swarm_robot_msgs/swarm_robot_action:swarm_robot_ros_sim/swarm_robot_msgs/swarm_robot_msg:swarm_robot_ros_sim/swarm_robot_msgs/swarm_robot_srv:swarm_robot_ros_sim/swarm_robot_simulation:temperature_pub_sub
+-DCATKIN_DEVEL_PREFIX=/home/richu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/richu/catkin_ws/install -G Unix Makefiles

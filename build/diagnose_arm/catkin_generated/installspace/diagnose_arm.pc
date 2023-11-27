@@ -1,0 +1,8 @@
+prefix=/home/richu/catkin_ws/install
+
+Name: diagnose_arm
+Description: Description of diagnose_arm
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

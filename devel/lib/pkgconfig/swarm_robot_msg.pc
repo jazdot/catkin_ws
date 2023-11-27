@@ -1,0 +1,8 @@
+prefix=/home/richu/catkin_ws/devel
+
+Name: swarm_robot_msg
+Description: Description of swarm_robot_msg
+Version: 0.0.0
+Cflags: -I/home/richu/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

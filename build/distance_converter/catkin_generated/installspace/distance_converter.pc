@@ -1,0 +1,8 @@
+prefix=/home/richu/catkin_ws/install
+
+Name: distance_converter
+Description: Description of distance_converter
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs

@@ -1,0 +1,10 @@
+(cl:defpackage swarm_robot_srv-srv
+  (:use )
+  (:export
+   "TWO_WHEEL_ROBOT_UPDATE"
+   "<TWO_WHEEL_ROBOT_UPDATE-REQUEST>"
+   "TWO_WHEEL_ROBOT_UPDATE-REQUEST"
+   "<TWO_WHEEL_ROBOT_UPDATE-RESPONSE>"
+   "TWO_WHEEL_ROBOT_UPDATE-RESPONSE"
+  ))
+
