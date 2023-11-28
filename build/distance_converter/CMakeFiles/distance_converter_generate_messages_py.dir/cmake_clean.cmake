@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_DistanceConversion.py"
   "/home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/__init__.py"
+  "/home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_motorStatus.py"
   "CMakeFiles/distance_converter_generate_messages_py"
 )
 

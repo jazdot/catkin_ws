@@ -42,7 +42,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/distance_converter/srv" TYPE FILE FILES "/home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/distance_converter/srv" TYPE FILE FILES
+    "/home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv"
+    "/home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

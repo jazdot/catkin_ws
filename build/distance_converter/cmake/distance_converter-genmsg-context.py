@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv"
+services_str = "/home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv;/home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv"
 pkg_name = "distance_converter"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

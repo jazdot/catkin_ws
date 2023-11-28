@@ -1,2 +1,2 @@
 set(distance_converter_MESSAGE_FILES "")
-set(distance_converter_SERVICE_FILES "srv/DistanceConversion.srv")
+set(distance_converter_SERVICE_FILES "srv/DistanceConversion.srv;srv/motorStatus.srv")

@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/richu/catkin_ws/build
 include distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/progress.make
 
 distance_converter/CMakeFiles/distance_converter_generate_messages_eus: /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv/DistanceConversion.l
+distance_converter/CMakeFiles/distance_converter_generate_messages_eus: /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv/motorStatus.l
 distance_converter/CMakeFiles/distance_converter_generate_messages_eus: /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/manifest.l
 
 
@@ -62,12 +63,18 @@ distance_converter/CMakeFiles/distance_converter_generate_messages_eus: /home/ri
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from distance_converter/DistanceConversion.srv"
 	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv
 
+/home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv/motorStatus.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv/motorStatus.l: /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from distance_converter/motorStatus.srv"
+	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv
+
 /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for distance_converter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for distance_converter"
 	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter distance_converter std_msgs
 
 distance_converter_generate_messages_eus: distance_converter/CMakeFiles/distance_converter_generate_messages_eus
 distance_converter_generate_messages_eus: /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv/DistanceConversion.l
+distance_converter_generate_messages_eus: /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/srv/motorStatus.l
 distance_converter_generate_messages_eus: /home/richu/catkin_ws/devel/share/roseus/ros/distance_converter/manifest.l
 distance_converter_generate_messages_eus: distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build.make
 

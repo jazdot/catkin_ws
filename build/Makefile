@@ -701,56 +701,30 @@ swarm_robot_srv_gennodejs/fast:
 .PHONY : swarm_robot_srv_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named std_srvs_generate_messages_py
+# Target rules for targets named diagnose_arm_genpy
 
 # Build rule for target.
-std_srvs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
-.PHONY : std_srvs_generate_messages_py
+diagnose_arm_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_genpy
+.PHONY : diagnose_arm_genpy
 
 # fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_py.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
+diagnose_arm_genpy/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_genpy.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_genpy.dir/build
+.PHONY : diagnose_arm_genpy/fast
 
 #=============================================================================
-# Target rules for targets named std_srvs_generate_messages_nodejs
+# Target rules for targets named diagnose_arm_gennodejs
 
 # Build rule for target.
-std_srvs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_nodejs
-.PHONY : std_srvs_generate_messages_nodejs
+diagnose_arm_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_gennodejs
+.PHONY : diagnose_arm_gennodejs
 
 # fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_lisp
-
-# Build rule for target.
-std_srvs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_eus
-
-# Build rule for target.
-std_srvs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_eus
-.PHONY : std_srvs_generate_messages_eus
-
-# fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
+diagnose_arm_gennodejs/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_gennodejs.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_gennodejs.dir/build
+.PHONY : diagnose_arm_gennodejs/fast
 
 #=============================================================================
 # Target rules for targets named std_srvs_generate_messages_cpp
@@ -766,238 +740,212 @@ std_srvs_generate_messages_cpp/fast:
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_genpy
+# Target rules for targets named std_srvs_generate_messages_eus
 
 # Build rule for target.
-distance_converter_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_genpy
-.PHONY : distance_converter_genpy
+std_srvs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_eus
+.PHONY : std_srvs_generate_messages_eus
 
 # fast build rule for target.
-distance_converter_genpy/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_genpy.dir/build.make distance_converter/CMakeFiles/distance_converter_genpy.dir/build
-.PHONY : distance_converter_genpy/fast
+std_srvs_generate_messages_eus/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_generate_messages_py
+# Target rules for targets named _diagnose_arm_generate_messages_check_deps_MotorStatus
 
 # Build rule for target.
-distance_converter_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_py
-.PHONY : distance_converter_generate_messages_py
+_diagnose_arm_generate_messages_check_deps_MotorStatus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _diagnose_arm_generate_messages_check_deps_MotorStatus
+.PHONY : _diagnose_arm_generate_messages_check_deps_MotorStatus
 
 # fast build rule for target.
-distance_converter_generate_messages_py/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build
-.PHONY : distance_converter_generate_messages_py/fast
+_diagnose_arm_generate_messages_check_deps_MotorStatus/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/_diagnose_arm_generate_messages_check_deps_MotorStatus.dir/build.make diagnose_arm/CMakeFiles/_diagnose_arm_generate_messages_check_deps_MotorStatus.dir/build
+.PHONY : _diagnose_arm_generate_messages_check_deps_MotorStatus/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_genlisp
+# Target rules for targets named diagnose_arm_generate_messages_eus
 
 # Build rule for target.
-distance_converter_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_genlisp
-.PHONY : distance_converter_genlisp
+diagnose_arm_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_generate_messages_eus
+.PHONY : diagnose_arm_generate_messages_eus
 
 # fast build rule for target.
-distance_converter_genlisp/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_genlisp.dir/build.make distance_converter/CMakeFiles/distance_converter_genlisp.dir/build
-.PHONY : distance_converter_genlisp/fast
+diagnose_arm_generate_messages_eus/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_eus.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_eus.dir/build
+.PHONY : diagnose_arm_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_generate_messages_lisp
+# Target rules for targets named diagnose_arm_genlisp
 
 # Build rule for target.
-distance_converter_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_lisp
-.PHONY : distance_converter_generate_messages_lisp
+diagnose_arm_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_genlisp
+.PHONY : diagnose_arm_genlisp
 
 # fast build rule for target.
-distance_converter_generate_messages_lisp/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build
-.PHONY : distance_converter_generate_messages_lisp/fast
+diagnose_arm_genlisp/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_genlisp.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_genlisp.dir/build
+.PHONY : diagnose_arm_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_generate_messages_nodejs
+# Target rules for targets named std_srvs_generate_messages_lisp
 
 # Build rule for target.
-distance_converter_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_nodejs
-.PHONY : distance_converter_generate_messages_nodejs
+std_srvs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-distance_converter_generate_messages_nodejs/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build
-.PHONY : distance_converter_generate_messages_nodejs/fast
+std_srvs_generate_messages_lisp/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_geneus
+# Target rules for targets named std_srvs_generate_messages_nodejs
 
 # Build rule for target.
-distance_converter_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_geneus
-.PHONY : distance_converter_geneus
+std_srvs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_nodejs
+.PHONY : std_srvs_generate_messages_nodejs
 
 # fast build rule for target.
-distance_converter_geneus/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_geneus.dir/build.make distance_converter/CMakeFiles/distance_converter_geneus.dir/build
-.PHONY : distance_converter_geneus/fast
+std_srvs_generate_messages_nodejs/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_generate_messages_eus
+# Target rules for targets named diagnose_arm_generate_messages
 
 # Build rule for target.
-distance_converter_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_eus
-.PHONY : distance_converter_generate_messages_eus
+diagnose_arm_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_generate_messages
+.PHONY : diagnose_arm_generate_messages
 
 # fast build rule for target.
-distance_converter_generate_messages_eus/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build
-.PHONY : distance_converter_generate_messages_eus/fast
+diagnose_arm_generate_messages/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_generate_messages.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_generate_messages.dir/build
+.PHONY : diagnose_arm_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_gennodejs
+# Target rules for targets named diagnose_arm_generate_messages_lisp
 
 # Build rule for target.
-distance_converter_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_gennodejs
-.PHONY : distance_converter_gennodejs
+diagnose_arm_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_generate_messages_lisp
+.PHONY : diagnose_arm_generate_messages_lisp
 
 # fast build rule for target.
-distance_converter_gennodejs/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build
-.PHONY : distance_converter_gennodejs/fast
+diagnose_arm_generate_messages_lisp/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_lisp.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_lisp.dir/build
+.PHONY : diagnose_arm_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_gencpp
+# Target rules for targets named std_srvs_generate_messages_py
 
 # Build rule for target.
-distance_converter_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_gencpp
-.PHONY : distance_converter_gencpp
+std_srvs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
+.PHONY : std_srvs_generate_messages_py
 
 # fast build rule for target.
-distance_converter_gencpp/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_gencpp.dir/build.make distance_converter/CMakeFiles/distance_converter_gencpp.dir/build
-.PHONY : distance_converter_gencpp/fast
+std_srvs_generate_messages_py/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/std_srvs_generate_messages_py.dir/build.make diagnose_arm/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_eus
+# Target rules for targets named diagnose_arm_generate_messages_py
 
 # Build rule for target.
-roscpp_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
-.PHONY : roscpp_generate_messages_eus
+diagnose_arm_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_generate_messages_py
+.PHONY : diagnose_arm_generate_messages_py
 
 # fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
+diagnose_arm_generate_messages_py/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_py.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_py.dir/build
+.PHONY : diagnose_arm_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
+# Target rules for targets named diagnose_arm_generate_messages_nodejs
 
 # Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
+diagnose_arm_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_generate_messages_nodejs
+.PHONY : diagnose_arm_generate_messages_nodejs
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
+diagnose_arm_generate_messages_nodejs/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_nodejs.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_nodejs.dir/build
+.PHONY : diagnose_arm_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named distance_converter_generate_messages
+# Target rules for targets named diagnose_arm_gencpp
 
 # Build rule for target.
-distance_converter_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages
-.PHONY : distance_converter_generate_messages
+diagnose_arm_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_gencpp
+.PHONY : diagnose_arm_gencpp
 
 # fast build rule for target.
-distance_converter_generate_messages/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build
-.PHONY : distance_converter_generate_messages/fast
+diagnose_arm_gencpp/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_gencpp.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_gencpp.dir/build
+.PHONY : diagnose_arm_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
+# Target rules for targets named diagnose_arm_generate_messages_cpp
 
 # Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
+diagnose_arm_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_generate_messages_cpp
+.PHONY : diagnose_arm_generate_messages_cpp
 
 # fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
+diagnose_arm_generate_messages_cpp/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_cpp.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_generate_messages_cpp.dir/build
+.PHONY : diagnose_arm_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
+# Target rules for targets named diagnose_arm_geneus
 
 # Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
+diagnose_arm_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnose_arm_geneus
+.PHONY : diagnose_arm_geneus
 
 # fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
+diagnose_arm_geneus/fast:
+	$(MAKE) -f diagnose_arm/CMakeFiles/diagnose_arm_geneus.dir/build.make diagnose_arm/CMakeFiles/diagnose_arm_geneus.dir/build
+.PHONY : diagnose_arm_geneus/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+# Target rules for targets named _distance_converter_generate_messages_check_deps_motorStatus
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
+_distance_converter_generate_messages_check_deps_motorStatus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _distance_converter_generate_messages_check_deps_motorStatus
+.PHONY : _distance_converter_generate_messages_check_deps_motorStatus
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+_distance_converter_generate_messages_check_deps_motorStatus/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/build.make distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/build
+.PHONY : _distance_converter_generate_messages_check_deps_motorStatus/fast
 
 #=============================================================================
-# Target rules for targets named _distance_converter_generate_messages_check_deps_DistanceConversion
+# Target rules for targets named rosgraph_msgs_generate_messages_py
 
 # Build rule for target.
-_distance_converter_generate_messages_check_deps_DistanceConversion: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _distance_converter_generate_messages_check_deps_DistanceConversion
-.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
 
 # fast build rule for target.
-_distance_converter_generate_messages_check_deps_DistanceConversion/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build.make distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build
-.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
@@ -1013,17 +961,82 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _distance_converter_generate_messages_check_deps_DistanceConversion
+
+# Build rule for target.
+_distance_converter_generate_messages_check_deps_DistanceConversion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _distance_converter_generate_messages_check_deps_DistanceConversion
+.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion
+
+# fast build rule for target.
+_distance_converter_generate_messages_check_deps_DistanceConversion/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build.make distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build
+.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_generate_messages
+
+# Build rule for target.
+distance_converter_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages
+.PHONY : distance_converter_generate_messages
+
+# fast build rule for target.
+distance_converter_generate_messages/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build
+.PHONY : distance_converter_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -1050,6 +1063,162 @@ distance_converter_generate_messages_cpp: cmake_check_build_system
 distance_converter_generate_messages_cpp/fast:
 	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_cpp.dir/build
 .PHONY : distance_converter_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_gencpp
+
+# Build rule for target.
+distance_converter_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_gencpp
+.PHONY : distance_converter_gencpp
+
+# fast build rule for target.
+distance_converter_gencpp/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_gencpp.dir/build.make distance_converter/CMakeFiles/distance_converter_gencpp.dir/build
+.PHONY : distance_converter_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_gennodejs
+
+# Build rule for target.
+distance_converter_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_gennodejs
+.PHONY : distance_converter_gennodejs
+
+# fast build rule for target.
+distance_converter_gennodejs/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build
+.PHONY : distance_converter_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_generate_messages_eus
+
+# Build rule for target.
+distance_converter_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_eus
+.PHONY : distance_converter_generate_messages_eus
+
+# fast build rule for target.
+distance_converter_generate_messages_eus/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build
+.PHONY : distance_converter_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_geneus
+
+# Build rule for target.
+distance_converter_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_geneus
+.PHONY : distance_converter_geneus
+
+# fast build rule for target.
+distance_converter_geneus/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_geneus.dir/build.make distance_converter/CMakeFiles/distance_converter_geneus.dir/build
+.PHONY : distance_converter_geneus/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_generate_messages_nodejs
+
+# Build rule for target.
+distance_converter_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_nodejs
+.PHONY : distance_converter_generate_messages_nodejs
+
+# fast build rule for target.
+distance_converter_generate_messages_nodejs/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build
+.PHONY : distance_converter_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_generate_messages_lisp
+
+# Build rule for target.
+distance_converter_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_lisp
+.PHONY : distance_converter_generate_messages_lisp
+
+# fast build rule for target.
+distance_converter_generate_messages_lisp/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build
+.PHONY : distance_converter_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_genlisp
+
+# Build rule for target.
+distance_converter_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_genlisp
+.PHONY : distance_converter_genlisp
+
+# fast build rule for target.
+distance_converter_genlisp/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_genlisp.dir/build.make distance_converter/CMakeFiles/distance_converter_genlisp.dir/build
+.PHONY : distance_converter_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_generate_messages_py
+
+# Build rule for target.
+distance_converter_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_generate_messages_py
+.PHONY : distance_converter_generate_messages_py
+
+# fast build rule for target.
+distance_converter_generate_messages_py/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build
+.PHONY : distance_converter_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named distance_converter_genpy
+
+# Build rule for target.
+distance_converter_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_converter_genpy
+.PHONY : distance_converter_genpy
+
+# fast build rule for target.
+distance_converter_genpy/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/distance_converter_genpy.dir/build.make distance_converter/CMakeFiles/distance_converter_genpy.dir/build
+.PHONY : distance_converter_genpy/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named swarm_robot_action_genlisp
@@ -1508,33 +1677,46 @@ help:
 	@echo "... swarm_robot_srv_genlisp"
 	@echo "... swarm_robot_srv_generate_messages_py"
 	@echo "... swarm_robot_srv_gennodejs"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... std_srvs_generate_messages_eus"
+	@echo "... diagnose_arm_genpy"
+	@echo "... diagnose_arm_gennodejs"
 	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... distance_converter_genpy"
-	@echo "... distance_converter_generate_messages_py"
-	@echo "... distance_converter_genlisp"
-	@echo "... distance_converter_generate_messages_lisp"
-	@echo "... distance_converter_generate_messages_nodejs"
-	@echo "... distance_converter_geneus"
-	@echo "... distance_converter_generate_messages_eus"
-	@echo "... distance_converter_gennodejs"
-	@echo "... distance_converter_gencpp"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... distance_converter_generate_messages"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... _distance_converter_generate_messages_check_deps_DistanceConversion"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... _diagnose_arm_generate_messages_check_deps_MotorStatus"
+	@echo "... diagnose_arm_generate_messages_eus"
+	@echo "... diagnose_arm_genlisp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... diagnose_arm_generate_messages"
+	@echo "... diagnose_arm_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... diagnose_arm_generate_messages_py"
+	@echo "... diagnose_arm_generate_messages_nodejs"
+	@echo "... diagnose_arm_gencpp"
+	@echo "... diagnose_arm_generate_messages_cpp"
+	@echo "... diagnose_arm_geneus"
+	@echo "... _distance_converter_generate_messages_check_deps_motorStatus"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... _distance_converter_generate_messages_check_deps_DistanceConversion"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... distance_converter_generate_messages"
+	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... distance_converter_generate_messages_cpp"
+	@echo "... distance_converter_gencpp"
+	@echo "... distance_converter_gennodejs"
+	@echo "... distance_converter_generate_messages_eus"
+	@echo "... distance_converter_geneus"
+	@echo "... distance_converter_generate_messages_nodejs"
+	@echo "... distance_converter_generate_messages_lisp"
+	@echo "... distance_converter_genlisp"
+	@echo "... distance_converter_generate_messages_py"
+	@echo "... distance_converter_genpy"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... swarm_robot_action_genlisp"
 	@echo "... swarm_robot_action_generate_messages_lisp"
 	@echo "... swarm_robot_action_geneus"

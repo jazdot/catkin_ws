@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/richu/catkin_ws/build
 include distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/progress.make
 
 distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs: /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/DistanceConversion.js
+distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs: /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/motorStatus.js
 
 
 /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/DistanceConversion.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs: /home
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from distance_converter/DistanceConversion.srv"
 	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv
 
+/home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/motorStatus.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/motorStatus.js: /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from distance_converter/motorStatus.srv"
+	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv
+
 distance_converter_generate_messages_nodejs: distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs
 distance_converter_generate_messages_nodejs: /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/DistanceConversion.js
+distance_converter_generate_messages_nodejs: /home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/motorStatus.js
 distance_converter_generate_messages_nodejs: distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build.make
 
 .PHONY : distance_converter_generate_messages_nodejs

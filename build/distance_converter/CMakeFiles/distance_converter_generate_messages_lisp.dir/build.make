@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/richu/catkin_ws/build
 include distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/progress.make
 
 distance_converter/CMakeFiles/distance_converter_generate_messages_lisp: /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/DistanceConversion.lisp
+distance_converter/CMakeFiles/distance_converter_generate_messages_lisp: /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/motorStatus.lisp
 
 
 /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/DistanceConversion.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,14 @@ distance_converter/CMakeFiles/distance_converter_generate_messages_lisp: /home/r
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from distance_converter/DistanceConversion.srv"
 	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv
 
+/home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/motorStatus.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/motorStatus.lisp: /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from distance_converter/motorStatus.srv"
+	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv
+
 distance_converter_generate_messages_lisp: distance_converter/CMakeFiles/distance_converter_generate_messages_lisp
 distance_converter_generate_messages_lisp: /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/DistanceConversion.lisp
+distance_converter_generate_messages_lisp: /home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/motorStatus.lisp
 distance_converter_generate_messages_lisp: distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build.make
 
 .PHONY : distance_converter_generate_messages_lisp

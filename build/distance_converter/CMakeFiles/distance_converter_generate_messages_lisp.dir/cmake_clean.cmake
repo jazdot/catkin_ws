@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/DistanceConversion.lisp"
+  "/home/richu/catkin_ws/devel/share/common-lisp/ros/distance_converter/srv/motorStatus.lisp"
   "CMakeFiles/distance_converter_generate_messages_lisp"
 )
 

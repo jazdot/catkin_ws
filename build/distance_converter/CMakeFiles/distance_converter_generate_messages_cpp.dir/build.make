@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/richu/catkin_ws/build
 include distance_converter/CMakeFiles/distance_converter_generate_messages_cpp.dir/progress.make
 
 distance_converter/CMakeFiles/distance_converter_generate_messages_cpp: /home/richu/catkin_ws/devel/include/distance_converter/DistanceConversion.h
+distance_converter/CMakeFiles/distance_converter_generate_messages_cpp: /home/richu/catkin_ws/devel/include/distance_converter/motorStatus.h
 
 
 /home/richu/catkin_ws/devel/include/distance_converter/DistanceConversion.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -63,8 +64,16 @@ distance_converter/CMakeFiles/distance_converter_generate_messages_cpp: /home/ri
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from distance_converter/DistanceConversion.srv"
 	cd /home/richu/catkin_ws/src/distance_converter && /home/richu/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/include/distance_converter -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/richu/catkin_ws/devel/include/distance_converter/motorStatus.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/richu/catkin_ws/devel/include/distance_converter/motorStatus.h: /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv
+/home/richu/catkin_ws/devel/include/distance_converter/motorStatus.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/richu/catkin_ws/devel/include/distance_converter/motorStatus.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from distance_converter/motorStatus.srv"
+	cd /home/richu/catkin_ws/src/distance_converter && /home/richu/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/include/distance_converter -e /opt/ros/noetic/share/gencpp/cmake/..
+
 distance_converter_generate_messages_cpp: distance_converter/CMakeFiles/distance_converter_generate_messages_cpp
 distance_converter_generate_messages_cpp: /home/richu/catkin_ws/devel/include/distance_converter/DistanceConversion.h
+distance_converter_generate_messages_cpp: /home/richu/catkin_ws/devel/include/distance_converter/motorStatus.h
 distance_converter_generate_messages_cpp: distance_converter/CMakeFiles/distance_converter_generate_messages_cpp.dir/build.make
 
 .PHONY : distance_converter_generate_messages_cpp

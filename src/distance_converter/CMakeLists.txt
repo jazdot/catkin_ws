@@ -61,6 +61,8 @@ catkin_python_setup()
 add_service_files(
   FILES
   DistanceConversion.srv
+  motorStatus.srv
+  # MotorStatus.srv
 )
 
 generate_messages(

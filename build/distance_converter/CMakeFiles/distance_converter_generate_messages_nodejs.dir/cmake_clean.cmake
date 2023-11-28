@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/DistanceConversion.js"
+  "/home/richu/catkin_ws/devel/share/gennodejs/ros/distance_converter/srv/motorStatus.js"
   "CMakeFiles/distance_converter_generate_messages_nodejs"
 )
 

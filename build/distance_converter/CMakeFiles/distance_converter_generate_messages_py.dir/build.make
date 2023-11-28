@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/richu/catkin_ws/build
 include distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/progress.make
 
 distance_converter/CMakeFiles/distance_converter_generate_messages_py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_DistanceConversion.py
+distance_converter/CMakeFiles/distance_converter_generate_messages_py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_motorStatus.py
 distance_converter/CMakeFiles/distance_converter_generate_messages_py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/__init__.py
 
 
@@ -62,13 +63,20 @@ distance_converter/CMakeFiles/distance_converter_generate_messages_py: /home/ric
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV distance_converter/DistanceConversion"
 	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/richu/catkin_ws/src/distance_converter/srv/DistanceConversion.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv
 
+/home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_motorStatus.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_motorStatus.py: /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV distance_converter/motorStatus"
+	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/richu/catkin_ws/src/distance_converter/srv/motorStatus.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p distance_converter -o /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv
+
 /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/__init__.py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_DistanceConversion.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for distance_converter"
+/home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/__init__.py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_motorStatus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/richu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for distance_converter"
 	cd /home/richu/catkin_ws/build/distance_converter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv --initpy
 
 distance_converter_generate_messages_py: distance_converter/CMakeFiles/distance_converter_generate_messages_py
 distance_converter_generate_messages_py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_DistanceConversion.py
+distance_converter_generate_messages_py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/_motorStatus.py
 distance_converter_generate_messages_py: /home/richu/catkin_ws/devel/lib/python3/dist-packages/distance_converter/srv/__init__.py
 distance_converter_generate_messages_py: distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build.make
 

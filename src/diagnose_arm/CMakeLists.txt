@@ -9,7 +9,6 @@ project(diagnose_arm)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   message_generation
-  message_runtime
   rospy
   std_msgs
   std_srvs
@@ -48,6 +47,8 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
+# catkin_python_setup()
+
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
@@ -56,11 +57,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  MotorStatus.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -70,10 +70,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -105,6 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
+	# CATKIN_DEPENDS rospy std_msgs
 #  INCLUDE_DIRS include
 #  LIBRARIES diagnose_arm
 #  CATKIN_DEPENDS message_generation message_runtime rospy std_msgs std_srvs
@@ -163,6 +164,14 @@ include_directories(
 ## in contrast to setup.py, you can choose the destination
 # catkin_install_python(PROGRAMS
 #   scripts/my_python_script
+#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
+
+# catkin_install_python(PROGRAMS
+#   # scripts/motor1_server.py
+#   # scripts/motor2_server.py
+#   # scripts/motor3_conv_server.py
+#   # scripts/diagnose_client.py
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 

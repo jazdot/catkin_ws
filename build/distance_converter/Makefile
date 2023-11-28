@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/richu/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -68,38 +80,16 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target test
+test/fast: test
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -112,28 +102,38 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : test/fast
+.PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,274 +168,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_genpy.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_genpy.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_genpy.dir/rule
+distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/rule
+.PHONY : distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/rule
 
 # Convenience name for target.
-distance_converter_genpy: distance_converter/CMakeFiles/distance_converter_genpy.dir/rule
+_distance_converter_generate_messages_check_deps_motorStatus: distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/rule
 
-.PHONY : distance_converter_genpy
+.PHONY : _distance_converter_generate_messages_check_deps_motorStatus
 
 # fast build rule for target.
-distance_converter_genpy/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_genpy.dir/build.make distance_converter/CMakeFiles/distance_converter_genpy.dir/build
-.PHONY : distance_converter_genpy/fast
+_distance_converter_generate_messages_check_deps_motorStatus/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/build.make distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_motorStatus.dir/build
+.PHONY : _distance_converter_generate_messages_check_deps_motorStatus/fast
 
 # Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule
+distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-distance_converter_generate_messages_py: distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule
+rosgraph_msgs_generate_messages_py: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
-.PHONY : distance_converter_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
 
 # fast build rule for target.
-distance_converter_generate_messages_py/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build
-.PHONY : distance_converter_generate_messages_py/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule
-
-# Convenience name for target.
-distance_converter_genlisp: distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule
-
-.PHONY : distance_converter_genlisp
-
-# fast build rule for target.
-distance_converter_genlisp/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_genlisp.dir/build.make distance_converter/CMakeFiles/distance_converter_genlisp.dir/build
-.PHONY : distance_converter_genlisp/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-distance_converter_generate_messages_lisp: distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule
-
-.PHONY : distance_converter_generate_messages_lisp
-
-# fast build rule for target.
-distance_converter_generate_messages_lisp/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build
-.PHONY : distance_converter_generate_messages_lisp/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-distance_converter_generate_messages_nodejs: distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule
-
-.PHONY : distance_converter_generate_messages_nodejs
-
-# fast build rule for target.
-distance_converter_generate_messages_nodejs/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build
-.PHONY : distance_converter_generate_messages_nodejs/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_geneus.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_geneus.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_geneus.dir/rule
-
-# Convenience name for target.
-distance_converter_geneus: distance_converter/CMakeFiles/distance_converter_geneus.dir/rule
-
-.PHONY : distance_converter_geneus
-
-# fast build rule for target.
-distance_converter_geneus/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_geneus.dir/build.make distance_converter/CMakeFiles/distance_converter_geneus.dir/build
-.PHONY : distance_converter_geneus/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-distance_converter_generate_messages_eus: distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule
-
-.PHONY : distance_converter_generate_messages_eus
-
-# fast build rule for target.
-distance_converter_generate_messages_eus/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build
-.PHONY : distance_converter_generate_messages_eus/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule
-
-# Convenience name for target.
-distance_converter_gennodejs: distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule
-
-.PHONY : distance_converter_gennodejs
-
-# fast build rule for target.
-distance_converter_gennodejs/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build
-.PHONY : distance_converter_gennodejs/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule
-
-# Convenience name for target.
-distance_converter_gencpp: distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule
-
-.PHONY : distance_converter_gencpp
-
-# fast build rule for target.
-distance_converter_gencpp/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_gencpp.dir/build.make distance_converter/CMakeFiles/distance_converter_gencpp.dir/build
-.PHONY : distance_converter_gencpp/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule
-.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule
-
-# Convenience name for target.
-distance_converter_generate_messages: distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule
-
-.PHONY : distance_converter_generate_messages
-
-# fast build rule for target.
-distance_converter_generate_messages/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build
-.PHONY : distance_converter_generate_messages/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule
-.PHONY : distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule
-
-# Convenience name for target.
-_distance_converter_generate_messages_check_deps_DistanceConversion: distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule
-
-.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion
-
-# fast build rule for target.
-_distance_converter_generate_messages_check_deps_DistanceConversion/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build.make distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build
-.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 distance_converter/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
@@ -453,19 +213,94 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
-distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+rosgraph_msgs_generate_messages_lisp: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_lisp
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule
+.PHONY : distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule
+
+# Convenience name for target.
+_distance_converter_generate_messages_check_deps_DistanceConversion: distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/rule
+
+.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion
+
+# fast build rule for target.
+_distance_converter_generate_messages_check_deps_DistanceConversion/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build.make distance_converter/CMakeFiles/_distance_converter_generate_messages_check_deps_DistanceConversion.dir/build
+.PHONY : _distance_converter_generate_messages_check_deps_DistanceConversion/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule
+
+# Convenience name for target.
+distance_converter_generate_messages: distance_converter/CMakeFiles/distance_converter_generate_messages.dir/rule
+
+.PHONY : distance_converter_generate_messages
+
+# fast build rule for target.
+distance_converter_generate_messages/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages.dir/build
+.PHONY : distance_converter_generate_messages/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -497,41 +332,222 @@ distance_converter_generate_messages_cpp/fast:
 	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_cpp.dir/build
 .PHONY : distance_converter_generate_messages_cpp/fast
 
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule
+
+# Convenience name for target.
+distance_converter_gencpp: distance_converter/CMakeFiles/distance_converter_gencpp.dir/rule
+
+.PHONY : distance_converter_gencpp
+
+# fast build rule for target.
+distance_converter_gencpp/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_gencpp.dir/build.make distance_converter/CMakeFiles/distance_converter_gencpp.dir/build
+.PHONY : distance_converter_gencpp/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule
+
+# Convenience name for target.
+distance_converter_gennodejs: distance_converter/CMakeFiles/distance_converter_gennodejs.dir/rule
+
+.PHONY : distance_converter_gennodejs
+
+# fast build rule for target.
+distance_converter_gennodejs/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_gennodejs.dir/build
+.PHONY : distance_converter_gennodejs/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+distance_converter_generate_messages_eus: distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/rule
+
+.PHONY : distance_converter_generate_messages_eus
+
+# fast build rule for target.
+distance_converter_generate_messages_eus/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_eus.dir/build
+.PHONY : distance_converter_generate_messages_eus/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_geneus.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_geneus.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_geneus.dir/rule
+
+# Convenience name for target.
+distance_converter_geneus: distance_converter/CMakeFiles/distance_converter_geneus.dir/rule
+
+.PHONY : distance_converter_geneus
+
+# fast build rule for target.
+distance_converter_geneus/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_geneus.dir/build.make distance_converter/CMakeFiles/distance_converter_geneus.dir/build
+.PHONY : distance_converter_geneus/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+distance_converter_generate_messages_nodejs: distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/rule
+
+.PHONY : distance_converter_generate_messages_nodejs
+
+# fast build rule for target.
+distance_converter_generate_messages_nodejs/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_nodejs.dir/build
+.PHONY : distance_converter_generate_messages_nodejs/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+distance_converter_generate_messages_lisp: distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/rule
+
+.PHONY : distance_converter_generate_messages_lisp
+
+# fast build rule for target.
+distance_converter_generate_messages_lisp/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_lisp.dir/build
+.PHONY : distance_converter_generate_messages_lisp/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule
+
+# Convenience name for target.
+distance_converter_genlisp: distance_converter/CMakeFiles/distance_converter_genlisp.dir/rule
+
+.PHONY : distance_converter_genlisp
+
+# fast build rule for target.
+distance_converter_genlisp/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_genlisp.dir/build.make distance_converter/CMakeFiles/distance_converter_genlisp.dir/build
+.PHONY : distance_converter_genlisp/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule
+
+# Convenience name for target.
+distance_converter_generate_messages_py: distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/rule
+
+.PHONY : distance_converter_generate_messages_py
+
+# fast build rule for target.
+distance_converter_generate_messages_py/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build.make distance_converter/CMakeFiles/distance_converter_generate_messages_py.dir/build
+.PHONY : distance_converter_generate_messages_py/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/distance_converter_genpy.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/distance_converter_genpy.dir/rule
+.PHONY : distance_converter/CMakeFiles/distance_converter_genpy.dir/rule
+
+# Convenience name for target.
+distance_converter_genpy: distance_converter/CMakeFiles/distance_converter_genpy.dir/rule
+
+.PHONY : distance_converter_genpy
+
+# fast build rule for target.
+distance_converter_genpy/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/distance_converter_genpy.dir/build.make distance_converter/CMakeFiles/distance_converter_genpy.dir/build
+.PHONY : distance_converter_genpy/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	cd /home/richu/catkin_ws/build && $(MAKE) -f distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make distance_converter/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... distance_converter_genpy"
-	@echo "... distance_converter_generate_messages_py"
-	@echo "... distance_converter_genlisp"
-	@echo "... distance_converter_generate_messages_lisp"
-	@echo "... distance_converter_generate_messages_nodejs"
-	@echo "... distance_converter_geneus"
-	@echo "... distance_converter_generate_messages_eus"
-	@echo "... distance_converter_gennodejs"
-	@echo "... distance_converter_gencpp"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... distance_converter_generate_messages"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... install"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... _distance_converter_generate_messages_check_deps_DistanceConversion"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_lisp"
+	@echo "... _distance_converter_generate_messages_check_deps_motorStatus"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... _distance_converter_generate_messages_check_deps_DistanceConversion"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... install"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... distance_converter_generate_messages"
+	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... distance_converter_generate_messages_cpp"
+	@echo "... distance_converter_gencpp"
+	@echo "... distance_converter_gennodejs"
+	@echo "... distance_converter_generate_messages_eus"
+	@echo "... distance_converter_geneus"
+	@echo "... distance_converter_generate_messages_nodejs"
+	@echo "... install/strip"
+	@echo "... distance_converter_generate_messages_lisp"
+	@echo "... distance_converter_genlisp"
+	@echo "... distance_converter_generate_messages_py"
+	@echo "... distance_converter_genpy"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... edit_cache"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... install/local"
 .PHONY : help
 
 

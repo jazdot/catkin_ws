@@ -3,6 +3,6 @@ prefix=/home/richu/catkin_ws/devel
 Name: diagnose_arm
 Description: Description of diagnose_arm
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/richu/catkin_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: 
